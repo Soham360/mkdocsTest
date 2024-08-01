@@ -10,3 +10,6 @@
 [submodule "hello_icicle_auth_clients"]
 	path = hello_icicle_auth_clients
 	url = https://github.com/ICICLE-ai/hello_icicle_auth_clients
+[submodule "CI-Components-Catalog"]
+	path = CI-Components-Catalog
+	url = https://github.com/ICICLE-ai/CI-Components-Catalog
