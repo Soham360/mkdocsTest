@@ -1,10 +1,7 @@
-site_name: Mkdocs test website
-theme: 'readthedocs'
-
 plugins:
     - search
     - awesome-pages
-site_name: ICICLE Training Catalog
+site_name: Mkdocs test website
 theme: 'readthedocs'
 
 plugins:
