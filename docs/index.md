@@ -1,24 +1,5 @@
 # Documentation Dashboard
 
-<div class="dropdown-container">
-    <select id="repository-dropdown" onchange="populateFileDropdown()">
-        <option value="">Select a Repository</option>
-        <option value="PPODLinkML">PPODLinkML</option>
-        <option value="hello_icicle_auth_clients">hello_icicle_auth_clients</option>
-        <option value="galyleo">galyleo</option>
-        <option value="basic_skills">basic_skills</option>
-        <!-- Add more repositories here -->
-    </select>
-    <select id="file-dropdown" onchange="displayFileContent()">
-        <option value="">Select a YAML file</option>
-        <!-- Options will be populated based on the selected repository -->
-    </select>
-</div>
-
-## File Content
-
-<div id="file-content"></div>
-
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -48,12 +29,34 @@
     }
 </style>
 
+<div class="dropdown-container">
+    <select id="repository-dropdown" onchange="populateFileDropdown()">
+        <option value="">Select a Repository</option>
+        <option value="CI-Components-Catalog">CI Components Catalog</option>
+        <option value="PPODLinkML">PPODLinkML</option>
+        <option value="basic_skills">basic_skills</option>
+        <option value="galyleo">galyleo</option>
+        <option value="hello_icicle_auth_clients">hello_icicle_auth_clients</option>
+        <!-- Add more repositories here -->
+    </select>
+    <select id="file-dropdown" onchange="displayFileContent()">
+        <option value="">Select a YAML file</option>
+        <!-- Options will be populated based on the selected repository -->
+    </select>
+</div>
+
+## File Content
+
+<div id="file-content"></div>
+
 <script>
     const repoPaths = {
+        "CI-Components-Catalog": "ICICLE-ai/CI-Components-Catalog",
         "PPODLinkML": "ICICLE-ai/PPODLinkML",
-        "hello_icicle_auth_clients": "ICICLE-ai/hello_icicle_auth_clients",
+        "basic_skills": "Soham360/basic_skills",
         "galyleo": "Soham360/galyleo",
-        "basic_skills": "Soham360/basic_skills"
+        "hello_icicle_auth_clients": "ICICLE-ai/hello_icicle_auth_clients"
+        
         // Add GitHub paths for more repositories if needed
     };
 
@@ -115,7 +118,7 @@
         const selectedFile = fileDropdown.value;
 
         if (selectedRepo && selectedFile) {
-            const response = await fetch(`https://raw.githubusercontent.com/${repoPaths[selectedRepo]}/main/${selectedFile}`);
+            const response = await fetch(`https://raw.githubusercontent.com/${repoPaths[selectedRepo]}/master/${selectedFile}`);
             const content = await response.text();
             fileContentDiv.innerHTML = `<pre>${content}</pre>`;
         } else {

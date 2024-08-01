@@ -1,0 +1,219 @@
+{
+    "$defs": {
+        "Component": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "artifactOther": {
+                    "type": "string"
+                },
+                "biasAssessmentConducted": {
+                    "type": "boolean"
+                },
+                "citation": {
+                    "type": "string"
+                },
+                "codeReviewConducted": {
+                    "type": "boolean"
+                },
+                "componentVersion": {
+                    "type": "string"
+                },
+                "containerImage": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "developerDocumentationAvailable": {
+                    "type": "boolean"
+                },
+                "developerDocumentationUrl": {
+                    "type": "string"
+                },
+                "doi": {
+                    "type": "string"
+                },
+                "hasDependentComponents": {
+                    "items": {
+                        "$ref": "#/$defs/ComponentRelationship"
+                    },
+                    "type": "array"
+                },
+                "hpcModule": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "javaJar": {
+                    "type": "string"
+                },
+                "licenseUrl": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "owner": {
+                    "type": "string"
+                },
+                "primaryThrust": {
+                    "$ref": "#/$defs/Thrusts"
+                },
+                "publicAccess": {
+                    "type": "boolean"
+                },
+                "pypiPackage": {
+                    "type": "string"
+                },
+                "releaseNotesUrl": {
+                    "type": "string"
+                },
+                "rustCrate": {
+                    "type": "string"
+                },
+                "securityReviewConducted": {
+                    "type": "boolean"
+                },
+                "sourceCodeUrl": {
+                    "type": "string"
+                },
+                "status": {
+                    "$ref": "#/$defs/ComponentStatus"
+                },
+                "targetIcicleRelease": {
+                    "$ref": "#/$defs/IcicleReleases"
+                },
+                "testsWritten": {
+                    "type": "boolean"
+                },
+                "trainingTutorialsAvailable": {
+                    "type": "boolean"
+                },
+                "trainingTutorialsUrl": {
+                    "type": "string"
+                },
+                "unixPackage": {
+                    "type": "string"
+                },
+                "usageDocumentationAvailable": {
+                    "type": "boolean"
+                },
+                "usageDocumentationUrl": {
+                    "type": "string"
+                },
+                "usageMetricsCollected": {
+                    "type": "boolean"
+                },
+                "website": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "status",
+                "primaryThrust",
+                "targetIcicleRelease",
+                "componentVersion",
+                "licenseUrl",
+                "publicAccess"
+            ],
+            "title": "Component",
+            "type": "object"
+        },
+        "ComponentRelationship": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "related_to": {
+                    "type": "string"
+                },
+                "relationship_type": {
+                    "$ref": "#/$defs/ComponentRelationshipType"
+                }
+            },
+            "required": [
+                "related_to"
+            ],
+            "title": "ComponentRelationship",
+            "type": "object"
+        },
+        "ComponentRelationshipType": {
+            "description": "",
+            "enum": [
+                "DependsOn"
+            ],
+            "title": "ComponentRelationshipType",
+            "type": "string"
+        },
+        "ComponentStatus": {
+            "description": "",
+            "enum": [
+                "Unreleased",
+                "PrototypeRelease",
+                "AlphaRelease",
+                "BetaRelease",
+                "ProductionRelease"
+            ],
+            "title": "ComponentStatus",
+            "type": "string"
+        },
+        "Container": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "components": {
+                    "items": {
+                        "$ref": "#/$defs/Component"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Container",
+            "type": "object"
+        },
+        "IcicleReleases": {
+            "description": "",
+            "enum": [
+                "None",
+                "VC3",
+                "VC4"
+            ],
+            "title": "IcicleReleases",
+            "type": "string"
+        },
+        "Thrusts": {
+            "description": "",
+            "enum": [
+                "core/Software",
+                "core/CI4AI",
+                "core/AI4CI",
+                "core/FoundationAI",
+                "core/PADI",
+                "core/VA",
+                "useInspired/DA",
+                "useInspired/AE",
+                "useInspired/SF"
+            ],
+            "title": "Thrusts",
+            "type": "string"
+        }
+    },
+    "$id": "https://github.com/ICICLE-ai/CI-Components-Catalog/ci-components.yaml",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "components": {
+            "items": {
+                "$ref": "#/$defs/Component"
+            },
+            "type": "array"
+        }
+    },
+    "title": "icicle-ci-component",
+    "type": "object",
+    "version": null
+}
