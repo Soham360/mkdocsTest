@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Using SDSC HPC Resources: Basic Linux Skills on Expanse - Mkdocs test website</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/cards.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Using SDSC HPC Resources: Basic Linux Skills on Expanse";
+        var mkdocs_page_input_path = "basic_skills/basic_linux_skills_expanse/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Mkdocs test website
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Documentation Dashboard</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CI Components Catalog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/">CI Components Catalog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/CHANGELOG/">Change Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CI-Components-Catalog/architecture/">ICICLE Architecture Conceptual Components</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PPODLinkML</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/">PPOD_FSL - A LinkML Schema for UC Davis Food Systems Lab Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/LICENSE/">LICENSE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Basic skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">HPC Basic Skills</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Basic linux skills expanse</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Using SDSC HPC Resources: Basic Linux Skills on Expanse</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#basic-environment">Basic Environment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#directories-and-navigation">Directories and Navigation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copying-directories">Copying directories</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#manipulating-files">Manipulating Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wildcards">Wildcards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-utilities-to-learj">Other Utilities to Learj:</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Interactive computing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../interactive_computing/">Interactive Computing on the Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Running notebooks on expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../running_notebooks_on_expanse/">Using Jupyter Notebooks on the SDSC Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Using github</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using_github/">Using GitHub at SDSC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Galyleo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../galyleo/">galyleo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hello icicle auth clients</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hello_icicle_auth_clients/">Hello ICICLE Authentication Clients</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Icicle rel 03 2023</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/">Hello ICICLE Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >CLI</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >ICICONSOLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/ICICONSOLE/">ICICONSOLE</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >TapisCL ICICLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/TapisCL-ICICLE/">TapisCLI</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Scripting Examples</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >TapisCLICICLE</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Tapis config files</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Notebooks</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/Notebooks/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/images/readme/">Readme</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Mkdocs test website</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Basic skills</li>
+          <li class="breadcrumb-item">Basic linux skills expanse</li>
+      <li class="breadcrumb-item active">Using SDSC HPC Resources: Basic Linux Skills on Expanse</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-sdsc-hpc-resources-basic-linux-skills-on-expanse">Using SDSC HPC Resources:  Basic Linux Skills on Expanse</h1>
+<p>When you log on to <a href="https://expanse.sdsc.edu">Expanse</a>, your computer operating system will be a Linux or Unix shell. \"<em>A Unix shell is a command-line interpreter or shell that provides a traditional Unix-like command line user interface. This environment is very different from the easy to use GUI interfaces we have all become used in the Windows and MacOS systems</em>\" (https://en.wikipedia.org/wiki/Unix_shell).</p>
+<p>Basic Linux skills are necessary to complete the hands-on exercises. If it’s been a while since you’ve worked in a Linux environment, be sure to reacquaint yourself with the following topic (many of which are demonstrated below)s: copying, listing, deleting and renaming files; using wildcards; navigating directories; changing file permissions; setting environment variables; using common utilities (grep, cat, less, head, sort, tar, gzip). </p>
+<p>This tutorial is focussed on using Linux on the SDSC Expanse supercomputer. There a a lot of other tutorial on the Web:
+* A nice tutorial can be found here http://www.ee.surrey.ac.uk/Teaching/Unix/. You should also be comfortable with one of the standard Linux editors, such as vim, emacs, or nano.
+* For a fun tutorial on Linux, see the UCSD/SDSC Supercomputing Club's tutorial, based on a Google community project, here: https://supercomputing-club.sdsc.edu/posts/advent-of-scc-2023/advent-of-scc-epilogue/</p>
+<p>Notes:
+* For the examples below, we are using the <code>bash</code> shell, which is the default shell for new accounts on Expanse. For the purposes of following SDSC tutorials and exercises, please do not change the shell.
+* For any Linux command, you can find out what it does by asking for help. The syntax is usually
+  * <code>command</code> --help<br />
+  * man <code>command</code>  --&gt; invokes a user guide or manual
+  * search the web using google or some other search engine
+* In Linux/Unix, everything is a file: a text file, a directory, even the output for a command
+* Linux/Unix is case sensitive.</p>
+<p><a name="top"><strong>Examples::</strong>
+* <a href="#basic-env">Basic Environment</a>
+* <a href="#dirs-and-nav">Directories and Navigation</a>
+* <a href="#copydir">Copying directories</a>
+* <a href="#files">Files</a>
+* <a href="#permissions">Permissions</a>
+* <a href="#wildcards">Wildcards</a>
+* <a href="#common-utilities">Common Utilities</a></p>
+<p>Note: if you have difficulties completing this task, please contact staff at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#115;&#117;&#108;&#116;&#64;&#115;&#100;&#115;&#99;&#46;&#101;&#100;&#117;">&#99;&#111;&#110;&#115;&#117;&#108;&#116;&#64;&#115;&#100;&#115;&#99;&#46;&#101;&#100;&#117;</a>.</p>
+<hr>
+
+<h2 id="basic-environment"><a name="basic-env">Basic Environment</a></h2>
+<p>Using Unix commands, we can learn a lot about the machine we are logged onto. Some of the commands are simple:</p>
+<pre><code>[username@login02 ~]$ date
+Tue Jan 16 20:20:23 PST 2024
+[username@login02 ~]$ hostname
+login02
+[username@login02 ~]$ whoami
+username
+</code></pre>
+<p>Note: To learn about most unix commands, try accessing the <code>man</code> pages:</p>
+<pre><code class="language-sh">[username@login02 ~]$ man date
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+       ..... more info .....
+</code></pre>
+<p>The unix command <code>env</code> will print out the <em>environment</em> settings for your login session.
+The list below is an edited summary of all the information
+Warning: the output can be very long (over 90 lines)</p>
+<pre><code>[username@login02 ~]$ env
+MODULEPATH=/opt/modulefiles/mpi/.intel:/opt/modulefiles/applications/.intel:/opt/modulefiles/mpi:/opt/modulefiles/compilers:/opt/modulefiles/applications:/usr/share/Modules/modulefiles:/etc/modulefiles
+LOADEDMODULES=intel/2013_sp1.2.144:mvapich2_ib/2.1:gnutools/2.69
+HOME=/home/username
+SDSCHOME=/opt/sdsc
+LOGNAME=username
+SSH_CONNECTION=xxx.xxx.xx.xx 53640 198.202.113.253 22
+DISPLAY=localhost:48.0
+</code></pre>
+<p>It is often useful to print out (or use) environment variables. To print them out, use the <code>echo</code> command, and <code>$</code> sign (which extracts the value of the shell variable):</p>
+<pre><code>[username@login02 ~]$ echo $SHELL
+/bin/bash
+[username@login02 ~]$ echo $HOME
+/home/username
+</code></pre>
+<p>Another important environment variable is the home directory variable, the \"tilde\" character:  <code>~</code></p>
+<pre><code>[username@login02 ~]$ echo ~
+/home/username
+[username@login02 ~]$
+</code></pre>
+<p>You can create your own environment variables:</p>
+<pre><code>[username@login02 ~]$ MY_NAME=&quot;Super User&quot;
+[username@login02 ~]$ echo $MY_NAME
+Super User
+</code></pre>
+<p>Unix has the concept of users and groups. Groups are used to control access to resources (files, applications, etc.) and help establish a secure envionment Users can be in more than one group. To see which groups you are a member of, use the <code>group</code> command:</p>
+<pre><code>[username@login02 OPENMP]$ groups
+abc123 pet heart scicom-docs grdclus webwrt scwpf ...
+</code></pre>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="directories-and-navigation">Directories and Navigation<a name="dirs-and-nav"></a></h2>
+<p>In unix, everything is a file, which can be confusing at first. The locations for where files are stored   are called directories (which is equivalent to folders), and are also viewed as files by the operating system. To find out where you are in the system, use the <code>pwd</code> command (print working directory), which prints the full path to the directory you are currently in:</p>
+<pre><code>[username@login02 ~]$ pwd
+/home/username
+</code></pre>
+<p>To see what are the contents of the current directory are, use the file listing command <code>ls</code></p>
+<pre><code>[username@login02 ~]$ ls
+filelisting.txt intel   loadgccomgnuenv.sh  loadgnuenv.sh   loadintelenv.sh  tools
+</code></pre>
+<p>In every Unix directory, there are \"hidden\" files (just like on Macs and Windows machines), to see them, run the <code>ls -a</code> command:</p>
+<pre><code>[username@login02 ~]$ ls -a
+.   .bash_history  .bashrc   .gitconfig  loadgccomgnuenv.sh  .ncviewrc     .ssh  .vimrc
+..  .bash_logout   .config filelisting.txt   intel       loadgnuenv.sh   .petscconfig  tools     .Xauthority
+.alias  .bash_profile    .kshrc      loadintelenv.sh     .slurm        .viminfo
+</code></pre>
+<p>In Unix, sometimes it is hard tell if a file is a directory. To see file details (including timestamp and size), run the <code>ls -l</code> command:</p>
+<pre><code>[username@login02 ~]$ ls -l
+-rw-r--r-- 1 username abc123 322 Jul 17 21:04 filelisting.txt
+drwxr-xr-x 3 username abc123   3 Jun 22  2023 intel
+-rwx------ 1 username abc123 101 Jun 27  2023 loadgccomgnuenv.sh
+-rwx------ 1 username abc123  77 Oct 16  2023 loadgnuenv.sh
+-rwxr-xr-x 1 username abc123 125 Oct 16  2023 loadintelenv.sh
+drwxr-xr-x 2 username abc123   4 Jun 30  2023 tools
+</code></pre>
+<p>You can combine the two commands above and use it to see the full directory and file information:</p>
+<pre><code>[username@login02 ~]$ ls -al
+total 166
+drwx------   7 username abc123    23 Jul 17 19:33 .
+drwxr-xr-x 143 root    root       0 Jul 17 20:01 ..
+-rw-r--r--   1 username abc123  2487 Jun 23  2023 .alias
+-rw-------   1 username abc123 14247 Jul 17 12:11 .bash_history
+-rw-r--r--   1 username abc123    18 Jun 19  2023 .bash_logout
+-rw-r--r--   1 username abc123   176 Jun 19  2023 .bash_profile
+-rw-r--r--   1 username abc123   159 Jul 17 18:24 .bashrc
+drwx------   3 username abc123     3 Oct 23  2023 .config
+-rw-r--r--   1 username abc123  322 Jul 17 21:04 filelisting.txt
+-rw-r--r--   1 username abc123  1641 Jun 22  2023 .gccomrc
+-rw-r--r--   1 username abc123   245 Jun 28  2023 .gitconfig
+drwxr-xr-x   3 username abc123     3 Jun 22  2023 intel
+-rw-r--r--   1 username abc123   171 Jun 19  2023 .kshrc
+-rwx------   1 username abc123   101 Jun 27  2023 loadgccomgnuenv.sh
+-rwx------   1 username abc123    77 Oct 16  2023 loadgnuenv.sh
+-rwxr-xr-x   1 username abc123   125 Oct 16  2023 loadintelenv.sh
+[snip extra lines]
+</code></pre>
+<p>There are several things to notice in the above listing: the first column of data is information about the file "permissions\", which controls who can see/read/modify what files (<code>r</code>=read, <code>w</code>=write,<code>x</code>=execute,<code>-</code>=no permission); the next 2 columns are the username and groupID; the 3rd and 4th columns are the size and date. This is discussed in more detail in the <a href="#permissions">Permissions</a> section below. Also, note that two files have <code>dots</code> for their names: in unix the "dot" is a component of a filename. When working with filenames, a leading dot is the prefix of a "hidden" file, a file that an <code>ls</code> will not normally show. But also, the single dot, <code>.</code> represents the current working directory, and the double dots, <code>..</code> represent the directory above. You use these as arguments to unix commands dealing with directories.</p>
+<p>There are simple Linux commands to create and remove directories, and to populate the directories.
+To create a directory, use the <code>mkdir</code>, make directory command (more about directories in the sections below):</p>
+<pre><code>[username@login02 ~]$ mkdir testdir
+[username@login02 ~]$ ls -l
+total 12
+drwxr-xr-x 3 username abc123   3 Jun 22  2023 intel
+-rwx------ 1 username abc123 101 Jun 27  2023 loadgccomgnuenv.sh
+-rwx------ 1 username abc123  77 Oct 16  2023 loadgnuenv.sh
+-rwxr-xr-x 1 username abc123 125 Oct 16  2023 loadintelenv.sh
+drwxr-xr-x 2 username abc123   2 Jul 17 20:49 testdir
+drwxr-xr-x 2 username abc123   4 Jun 30  2023 tools
+</code></pre>
+<p>To move into that directory, use the <code>cd</code>, change directory command:</p>
+<pre><code>[username@login02 ~]$ cd testdir/
+[username@login02 testdir]$ ls -al
+total 20
+drwxr-xr-x 2 username abc123  2 Jul 17 20:49 .
+drwxr-x--- 9 username abc123 25 Jul 17 20:49 ..
+[username@login02 testdir]$
+</code></pre>
+<p>From this directory, you can use the <code>..</code> command to see the contents of the directory above:</p>
+<pre><code>[username@login02 testdir]$ ls -l ..
+[username@login02 testdir]$ /bin/ls -l ..
+total 22
+drwxr-xr-x 4 username abc123    5 Jul 17 20:43 expanse-examples
+-rw-r--r-- 1 username abc123 322 Jul 17 21:04 filelisting.txt
+drwxr-xr-x 3 username abc123    3 Jun 22  2023 intel
+-rwx------ 1 username abc123  101 Jun 27  2023 loadgccomgnuenv.sh
+-rwx------ 1 username abc123   77 Oct 16  2023 loadgnuenv.sh
+-rwxr-xr-x 1 username abc123  125 Oct 16  2023 loadintelenv.sh
+drwxr-xr-x 2 username abc123    4 Jul 17 20:53 testdir
+drwxr-xr-x 2 username abc123    4 Jun 30  2023 tools
+</code></pre>
+<p>To remove files and directories there are different mechanisms, depending on whether or not the directory is empty or contains files. For this example, we create a new directory, <code>testdir2</code>, we'll create three directories using the <code>mkdir</code> command, populate some testfiles using the <code>touch</code> command, and then try to delete the directories using either the <code>rmdir</code> or <code>rm</code> commands.</p>
+<pre><code>[username@login01 testdir]$cd ..
+[username@login01 testdir]$ mkdir testdir2
+[username@login01 testdir]$ cd testdir2
+[username@login01 testdir2]$ mkdir dir1
+[username@login01 testdir2]$ mkdir dir2
+[username@login01 testdir2]$ mkdir dir3
+[username@login01 testdir2]$ ll
+total 71
+drwxr-xr-x  5 username use300  5 Jan 17 22:11 .
+drwxr-x--- 50 username use300 91 Jan 17 22:01 ..
+drwxr-xr-x  2 username use300  2 Jan 17 22:11 dir1
+drwxr-xr-x  2 username use300  2 Jan 17 22:11 dir2
+drwxr-xr-x  2 username use300  2 Jan 17 22:11 dir3
+</code></pre>
+<p>Next, create some testfiles using the <code>touch</code> command:</p>
+<pre><code>[username@login01 testdir2]$ touch f1
+[username@login01 testdir2]$ touch f2
+[username@login01 testdir2]$ touch f3
+[username@login01 testdir2]$ touch dir2/file1
+[username@login01 testdir2]$ touch dir2/file2
+[username@login01 testdir2]$ touch dir2/file3
+[username@login01 testdir2]$ ls -al
+total 90
+drwxr-xr-x  5 username use300  8 Jan 17 22:23 .
+drwxr-x--- 50 username use300 91 Jan 17 22:01 ..
+drwxr-xr-x  2 username use300  5 Jan 17 22:23 dir1
+drwxr-xr-x  2 username use300  5 Jan 17 22:17 dir2
+drwxr-xr-x  2 username use300  5 Jan 17 22:18 dir3
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f1
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f2
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f3
+[username@login01 testdir2]$ ls -al dir2
+total 3
+drwxr-xr-x 2 username use300 5 Jan 17 22:17 .
+drwxr-xr-x 4 username use300 4 Jan 17 22:12 ..
+-rw-r--r-- 1 username use300 0 Jan 17 22:16 file1
+-rw-r--r-- 1 username use300 0 Jan 17 22:16 file2
+-rw-r--r-- 1 username use300 0 Jan 17 22:17 file3
+</code></pre>
+<p>For a file, we use the remove, <code>rm</code> command:</p>
+<pre><code>[username@login01 testdir2]$ 
+[username@login01 testdir2]$ rm f3
+[username@login01 testdir2]$ ll -al
+total 72
+drwxr-xr-x  5 username use300  7 Jan 17 22:31 .
+drwxr-x--- 50 username use300 91 Jan 17 22:01 ..
+drwxr-xr-x  2 username use300  5 Jan 17 22:23 dir1
+drwxr-xr-x  2 username use300  5 Jan 17 22:17 dir2
+drwxr-xr-x  2 username use300  5 Jan 17 22:18 dir3
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f1
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f2
+
+</code></pre>
+<p>For an <em>empty</em> directory, we can use the <code>rmdir</code> command:</p>
+<pre><code>[username@login01 testdir2]$ ls -al dir1
+total 1
+drwxr-xr-x 2 username use300 2 Jan 17 22:11 .
+drwxr-xr-x 5 username use300 5 Jan 17 22:11 ..
+[username@login01 testdir2]$ rm dir1
+rm: cannot remove 'dir1': Is a directory
+[username@login01 testdir2]$ rmdir dir1
+[username@login01 testdir2]$ ll
+total 71
+drwxr-xr-x  4 username use300  4 Jan 17 22:12 .
+drwxr-x--- 50 username use300 91 Jan 17 22:01 ..
+drwxr-xr-x  2 username use300  2 Jan 17 22:11 dir2
+drwxr-xr-x  2 username use300  2 Jan 17 22:11 dir3
+
+</code></pre>
+<p>If the directory has contents (files or subdirectories), you use the 'rm' command with arguments to <em>force</em> the removal of the directory and all of its contents:</p>
+<pre><code>[username@login01 testdir2]$ ll dir3
+total 3
+drwxr-xr-x 2 username use300 5 Jan 17 22:18 .
+drwxr-xr-x 5 username use300 7 Jan 17 22:31 ..
+-rw-r--r-- 1 username use300 0 Jan 17 22:18 file31
+-rw-r--r-- 1 username use300 0 Jan 17 22:18 file32
+-rw-r--r-- 1 username use300 0 Jan 17 22:18 file33
+[username@login01 testdir2]$ rmdir dir3
+rmdir: failed to remove 'dir3': Directory not empty
+[username@login01 testdir2]$ rm dir3
+rm: cannot remove 'dir3': Is a directory
+[username@login01 testdir2]$ rm -f dir3
+rm: cannot remove 'dir3': Is a directory
+[username@login01 testdir2]$ rm -rf dir3
+[username@login01 testdir2]$ ls -al
+total 72
+drwxr-xr-x  4 username use300  6 Jan 17 23:01 .
+drwxr-x--- 50 username use300 91 Jan 17 22:01 ..
+drwxr-xr-x  2 username use300  5 Jan 17 22:23 dir1
+drwxr-xr-x  2 username use300  5 Jan 17 22:17 dir2
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f1
+-rw-r--r--  1 username use300  0 Jan 17 22:23 f2
+</code></pre>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="copying-directories">Copying directories<a name="copydir"></a></h2>
+<p>A common task in computing is to work with examples and collaborator files. Suppose we want to copy the contents of another directory to our local directory. On Expanse, there is a large suite of applications that you can work with. In this example, we will copy the GPU application folder. Suppose you are interested in working with one of the files or directories in the /share/apps/examples/ directory.</p>
+<p>First, we will make a folder to hold expanse examples and then <code>cd</code> into that new directory. This is done using the <code>mkdir</code> command:</p>
+<pre><code>[username@login02 ~]$ mkdir expanse-examples
+[username@login02 ~]$ ls -al            
+total 166
+drwxr-x---   8 username abc123    24 Jul 17 20:20 .
+drwxr-xr-x 139 root    root       0 Jul 17 20:17 ..
+-rw-r--r--   1 username abc123  2487 Jun 23  2023 .alias
+-rw-------   1 username abc123 14247 Jul 17 12:11 .bash_history
+-rw-r--r--   1 username abc123    18 Jun 19  2023 .bash_logout
+-rw-r--r--   1 username abc123   176 Jun 19  2023 .bash_profile
+-rw-r--r--   1 username abc123   159 Jul 17 18:24 .bashrc
+drwxr-xr-x   2 username abc123     2 Jul 17 20:20 expanse-examples
+[snip extra lines]
+[username@login02 ~]$ cd expanse-examples/
+[username@login02 expanse-examples]$ pwd
+/home/username/expanse-examples
+[username@login02 expanse-examples]$
+</code></pre>
+<p>Next, we will look at the directory where the OPENMP code is stored:</p>
+<pre><code>[username@login02 ~]$ ls -al /share/apps/examples/OPENMP/
+total 740
+drwxrwxr-x  2 mahidhar abc123   4096 Mar 12 08:54 .
+drwxrwxr-x 56 mahidhar abc123   4096 May 14 18:11 ..
+-rwxr-xr-x  1 mahidhar abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r--  1 mahidhar abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-r--r--  1 mahidhar abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-r--r--  1 mahidhar abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r--  1 mahidhar abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-r--r--  1 mahidhar abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+</code></pre>
+<p>Copies of files and directories use the same command: <code>cp</code>. To copy a single file to the <code>expanse-examples</code> directory, we need to use the full path:</p>
+<pre><code class="language-sh">[username@login02 expanse-examples]$ cp /share/apps/examples/OPENMP/hello_openmp.f90 hello_openmp.f90
+[username@login02 expanse-examples]$ ls -al
+total 29
+drwxr-xr-x 2 username abc123   3 Jul 17 20:24 .
+drwxr-x--- 8 username abc123  24 Jul 17 20:20 ..
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+
+</code></pre>
+<p>For a large number of files, it is easier to copy the entire directory using the <code>-R</code> or <code>-r</code> recursive command:</p>
+<pre><code>[username@login02 expanse-examples]$ cp -r -p /share/apps/examples/OPENMP/ .
+[username@login02 expanse-examples]$ ll
+total 48
+drwxr-xr-x 3 username abc123   4 Jul 17 20:26 .
+drwxr-x--- 8 username abc123  24 Jul 17 20:20 ..
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+drwxr-xr-x 2 username abc123   8 Jul 17 20:26 OPENMP
+[username@login02 expanse-examples]$ ls -al OPENMP/
+total 479
+drwxrwxr-x 2 username abc123      8 Mar 12 08:54 .
+drwxr-xr-x 3 username abc123      4 Jul 17 20:32 ..
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-r--r-- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r-- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-r--r-- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+</code></pre>
+<p>There are several things to observe with this command:
+1. The owner of these new files is the user who ran the commands (username).
+2. The use of the <code>-r</code> argument is a recursive copy, which gets all files in the directory.
+3. The use of the <code>-p</code> arguement preserves the date/timestamp, which can be helpful but not always required.
+4. The use of one of the special <em>dot</em> characters,  . in the command above: the syntax tells the operating system to copy all contents of the <em>/share/apps/examples/OPENMP/</em> directory to the <code>.</code> directory, or the current directory, which in this case is:</p>
+<pre><code class="language-java">[username@login02 expanse-examples]$ pwd
+/home/username/expanse-examples
+[username@login02 expanse-examples]$ ls -al  
+total 48
+drwxr-xr-x 3 username abc123   4 Jul 17 20:32 .
+drwxr-x--- 8 username abc123  24 Jul 17 20:20 ..
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+drwxr-xr-x 2 username abc123   8 Jul 17 20:26 OPENMP
+[username@login02 expanse-examples]$ ls -al .
+total 48
+drwxr-xr-x 3 username abc123   4 Jul 17 20:32 .
+drwxr-x--- 8 username abc123  24 Jul 17 20:20 ..
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+drwxr-xr-x 2 username abc123   8 Jul 17 20:26 OPENMP
+</code></pre>
+<p>You can also copy a file or directory and give it a new name:</p>
+<pre><code>[username@login02 expanse-examples]$  cp -r -p /share/apps/examples/OPENMP/ FOOBAR  
+[username@login02 expanse-examples]$ ll
+total 49
+drwxr-xr-x 4 username abc123   5 Jul 17 21:19 .
+drwxr-x--- 9 username abc123  26 Jul 17 21:04 ..
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+drwxrwxr-x 2 username abc123   8 Mar 12 08:54 OPENMP
+drwxrwxr-x 2 username abc123   8 Mar 12 08:54 FOOBAR
+[username@login02 expanse-examples]$ ll FOOBAR
+total 488
+drwxrwxr-x 2 username abc123      8 Mar 12 08:54 .
+drwxr-xr-x 4 username abc123      5 Jul 17 21:19 ..
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-r--r-- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r-- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-r--r-- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+</code></pre>
+<p>You can rename a directory using the <code>mv</code> command:</p>
+<pre><code>[username@login02 expanse-examples]$ mv FOOBAR/ OPENMP_DUP
+[username@login02 expanse-examples]$ /bin/ls -l
+total 48
+-rw-r--r-- 1 username abc123 247 Jul 17 20:24 hello_openmp.f90
+drwxrwxr-x 2 username abc123   8 Mar 12 08:54 OPENMP
+drwxrwxr-x 2 username abc123   8 Mar 12 08:54 OPENMP_DUP
+[username@login02 expanse-examples]$
+</code></pre>
+<p>To move to the directory, use the <code>cd</code> (change directory)</p>
+<pre><code>[username@login02 expanse-examples]$ pwd
+/home/username/expanse-examples
+[username@login02 expanse-examples]$ cd OPENMP/
+[username@login02 OPENMP]$ pwd
+/home/username/expanse-examples/OPENMP
+[username@login02 OPENMP]$ ls -al
+total 479
+drwxr-xr-x 2 username abc123      8 Jul 17 20:26 .
+drwxr-xr-x 3 username abc123      4 Jul 17 20:32 ..
+-rwxr-xr-x 1 username abc123 728112 Jul 17 20:26 hello_openmp
+-rw-r--r-- 1 username abc123    984 Jul 17 20:26 hello_openmp.500005.expanse-27-01.out
+-rw-r--r-- 1 username abc123    247 Jul 17 20:26 hello_openmp.f90
+-rw-r--r-- 1 username abc123    656 Jul 17 20:26 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r-- 1 username abc123    310 Jul 17 20:26 openmp-slurm.sb
+-rw-r--r-- 1 username abc123    347 Jul 17 20:26 openmp-slurm-shared.sb
+</code></pre>
+<p>You can sort the order of the file listings by date (or size or other fields -- see the <code>man</code> pages). The default file listing in alphabetic, to  see the files in chronological order (or reverse):</p>
+<pre><code>[username@login02 expanse-examples]$ ls -alt OPENMP/
+total 479
+drwxr-xr-x 4 username abc123      5 Jul 17 20:43 ..
+drwxrwxr-x 2 username abc123      8 Mar 12 08:54 .
+-rw-r--r-- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r-- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+-rw-r--r-- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-r--r-- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+
+[username@login02 expanse-examples]$ ls -altr OPENMP/
+total 479
+-rw-r--r-- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-r--r-- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+-rw-r--r-- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+drwxrwxr-x 2 username abc123      8 Mar 12 08:54 .
+drwxr-xr-x 4 username abc123      5 Jul 17 20:43 ..
+</code></pre>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="manipulating-files"><a name="files">Manipulating Files</a></h2>
+<p>This section will show you more ways to manipulate files: copying, listing, deleting and renaming, and examining contents
+In the section above, we created files using the <code>touch</code> commmand, which will create a file with no contents. First we'll return to the first <code>testdir</code> using the <code>full directory path</code>:</p>
+<pre><code>[username@login01 testdir2]$ cd /home/username/testdir
+[username@login02 testdir]$ touch myfile1.txt
+[username@login02 testdir]$ touch myfile2.txt
+[username@login02 testdir]$ ls -l
+total 21
+drwxr-xr-x 2 username abc123  4 Jul 17 20:53 .
+drwxr-x--- 9 username abc123 25 Jul 17 20:49 ..
+-rw-r--r-- 1 username abc123  0 Jul 17 20:53 myfile1.txt
+-rw-r--r-- 1 username abc123  0 Jul 17 20:53 myfile2.txt
+</code></pre>
+<p>To copy a file from another directory  to the current directory, use the full path. In this example, we will copy the <em>filelisting.txt</em> file from the directory above, using the <code>..</code> (\"dot-dot\") variable for the directory location:</p>
+<pre><code class="language-java">[username@login02 testdir]$ cp ../filelisting.txt .
+[username@login02 testdir]$ ls -l
+total 11
+-rw-r--r-- 1 username abc123 322 Jul 17 21:09 filelisting.txt
+-rw-r--r-- 1 username abc123    0 Jul 17 20:53 myfile1.txt
+-rw-r--r-- 1 username abc123    0 Jul 17 20:53 myfile2.txt
+</code></pre>
+<p>To rename a file, use the <code>mv</code> (move) command:</p>
+<pre><code class="language-java">[username@login02 testdir]$ mv myfile2.txt newfile.txt
+[username@login02 testdir]$ ls -l
+total 11
+-rw-r--r-- 1 username abc123 1543 Jul 17 21:09 filelisting.txt
+-rw-r--r-- 1 username abc123    0 Jul 17 20:53 myfile1.txt
+-rw-r--r-- 1 username abc123    0 Jul 17 20:53 newfile.txt
+</code></pre>
+<p>To delete a file, use the <code>rm</code> (remove command):</p>
+<pre><code>[username@login02 testdir]$ rm myfile1.txt
+[username@login02 testdir]$  ls -l
+total 10
+-rw-r--r-- 1 username abc123 1543 Jul 17 21:09 filelisting.txt
+-rw-r--r-- 1 username abc123    0 Jul 17 20:53 newfile.txt
+-rw-r--r-- 1 username use300 1410 Jan 18 00:00 sdsc.txt
+</code></pre>
+<p>You can examine the contents of a file by using several Linux commands. First, we'll create a small file for testing:</p>
+<pre><code>[username@login01 testdir]$ ls -al &gt; dirlist.txt
+[username@login01 testdir]$ ls -al
+total 88
+drwxr-xr-x  2 username use300   5 Jan 17 23:49 .
+drwxr-x--- 51 username use300  93 Jan 17 23:46 ..
+-rw-r--r--  1 username use300 284 Jan 17 23:49 dirlist.txt
+-rw-r--r--  1 username use300 322 Jan 17 23:42 filelisting.txt
+-rw-r--r--  1 username use300   0 Jan 17 23:42 newfile.txt
+-rw-r--r-- 1 username use300 1410 Jan 18 00:00 sdsc.txt
+</code></pre>
+<p>To print out the contents of the entire file, use the <code>cat</code> command (cat - concatenate files and print on the standard output):</p>
+<pre><code>[username@login01 testdir]$ cat sdsc.txt
+The San Diego Supercomputer Center (SDSC) was established as one of the nation’s first supercomputer centers under a cooperative agreement by the National Science Foundation (NSF) in collaboration with UC San Diego and General Atomics (GA) Technologies. SDSC first opened its doors on November 14, 1985.
+
+For more than 35 years, it has grown and stewarded its national reputation as a pioneer and leader in high-performance and data-intensive computing and cyberinfrastructure. Located on the campus of UC San Diego, SDSC provides resources, services and expertise to the national research community including industry and academia.
+
+Cyberinfrastructure refers to an accessible, integrated network of computer-based resources and expertise, focused on accelerating scientific inquiry and discovery. With Voyager and Expanse, SDSC’s latest supercomputing resources, the center supports hundreds of multidisciplinary programs spanning a wide range of science themes—from earth sciences and biology to astrophysics, bioinformatics and health IT.
+
+SDSC participates in Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp; Support (ACCESS) and was a partner in eXtreme Science and Engineering Discovery Environment (XSEDE), two of the most advanced collections of integrated digital resources and services in the world.
+
+For general inquiries and comments: info@sdsc.edu
+SDSC website: www.sdsc.edu
+
+</code></pre>
+<p>The contents of a file may be too large to see at one time, to see how large it is we can run the <code>wc</code>, word count command:</p>
+<pre><code>[username@login01 testdir]$ wc ../README.md 
+  644  4531 30519 ../README.md
+</code></pre>
+<p>The output says that README file has 644 lines, 4531 words, and 30519 characters.
+We might want to look at the beginning (head) or end (tail):</p>
+<pre><code>[username@login01 testdir]$ head -n 1 sdsc.txt 
+The San Diego Supercomputer Center (SDSC) was established as one of the nation’s first supercomputer centers under a cooperative agreement by the National Science Foundation (NSF) in collaboration with UC San Diego and General Atomics (GA) Technologies. SDSC first opened its doors on November 14, 1985.
+[username@login01 testdir]$
+[username@login01 testdir]$ tail -n 2 sdsc.txt 
+For general inquiries and comments: info@sdsc.edu
+SDSC website: www.sdsc.edu
+</code></pre>
+<p>You can reorder the contents of a file using the <code>sort</code> command:</p>
+<pre><code>[mthomas@login01 testdir]$ sort sdsc.txt
+Cyberinfrastructure refers to an accessible, integrated network of computer-based resources and expertise, focused on accelerating scientific inquiry and discovery. With Voyager and Expanse, SDSC’s latest supercomputing resources, the center supports hundreds of multidisciplinary programs spanning a wide range of science themes—from earth sciences and biology to astrophysics, bioinformatics and health IT.
+For general inquiries and comments: info@sdsc.edu
+For more than 35 years, it has grown and stewarded its national reputation as a pioneer and leader in high-performance and data-intensive computing and cyberinfrastructure. Located on the campus of UC San Diego, SDSC provides resources, services and expertise to the national research community including industry and academia.
+SDSC participates in Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp; Support (ACCESS) and was a partner in eXtreme Science and Engineering Discovery Environment (XSEDE), two of the most advanced collections of integrated digital resources and services in the world.
+SDSC website: www.sdsc.edu
+The San Diego Supercomputer Center (SDSC) was established as one of the nation’s first supercomputer centers under a cooperative agreement by the National Science Foundation (NSF) in collaboration with UC San Diego and General Atomics (GA) Technologies. SDSC first opened its doors on November 14, 1985.
+</code></pre>
+<p>The <code>sort</code> command is useful for sorting through a long file and reording data.</p>
+<p>To search a file for a string you can use the <code>grep</code> command:</p>
+<pre><code>[mthomas@login01 testdir]$ grep -ni SDSC sdsc.txt 
+1:The San Diego Supercomputer Center (SDSC) was established as one of the nation’s first supercomputer centers under a cooperative agreement by the National Science Foundation (NSF) in collaboration with UC San Diego and General Atomics (GA) Technologies. SDSC first opened its doors on November 14, 1985.
+3:For more than 35 years, it has grown and stewarded its national reputation as a pioneer and leader in high-performance and data-intensive computing and cyberinfrastructure. Located on the campus of UC San Diego, SDSC provides resources, services and expertise to the national research community including industry and academia.
+5:Cyberinfrastructure refers to an accessible, integrated network of computer-based resources and expertise, focused on accelerating scientific inquiry and discovery. With Voyager and Expanse, SDSC’s latest supercomputing resources, the center supports hundreds of multidisciplinary programs spanning a wide range of science themes—from earth sciences and biology to astrophysics, bioinformatics and health IT.
+7:SDSC participates in Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp; Support (ACCESS) and was a partner in eXtreme Science and Engineering Discovery Environment (XSEDE), two of the most advanced collections of integrated digital resources and services in the world.
+9:For general inquiries and comments: info@sdsc.edu
+10:SDSC website: www.sdsc.edu
+</code></pre>
+<p>In the command above, we used the <code>grep -ni</code> argument to get the line number, and to ignore case. </p>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="permissions"><a name="permissions">Permissions</a></h2>
+<p>In the section we will look breifly at how to set file permissions. Before you can change the file permissions, you need to own it or have permission as a 2023 member. For a more detailed tutorial, see http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/. Permissions are written in the first column, with fields that specify whether or not the file is a directory (<code>d</code>), what the read/write/execution permissions (<code>rwx</code>) for the files are for users and groups.  Using the example below:</p>
+<pre><code>[username@login02 OPENMP]$ ls -l hello_openmp
+total 479
+drwxr-xr-x 2 username abc123      2 Jul 17 21:53 direxample
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+</code></pre>
+<p>The order of the markers are grouped into 4 fields:
+<code>-</code> <code>rwx</code> <code>r-x</code> <code>r-x</code>
+Field 1 == directory, a <code>d</code> or <code>-</code> means directory or not a directory
+Field 2 == owner permissions 'rwx' means the owner can read, write, and exectute
+Field 3 == 2023 permissions 'rwx' means the owner can read and exectute, but not modify
+Field 4 == other/world permissions 'r-x' means the others can read and exectute, but not modiry</p>
+<p>To change the file access permissions, use the <code>chmod</code> command. In the example below, only user username has permission to edit (<code>rw-</code>) the files, members of the 2023 abc123 and others have read only permission (<code>--</code>). There are several ways to modify permissions, we will use the binary representation where the rwx status represents a binary number 2^n, where n is the position of the permission starting from the right. For example:</p>
+<pre><code>  r-- = 2^2 + 0 + 0 = 4 + 0 + 0 = 4
+  rw- = 2^2 + 2^1 + 0 = 4 + 2 + 0 = 6
+  r-x = 2^2 + 0 + 2^0 = 4 + 0 + 1 = 5
+  rwx = 2^2 + 2^1 + 2^0 = 4 + 2 + 1 = 7
+</code></pre>
+<p>In the example below, we will set read and write permissions to the owner and the group, and limit the other/world 2023 to read only:</p>
+<pre><code>[username@login02 OPENMP]$ ls -l
+total 479
+drwxr-xr-x 2 username abc123      2 Jul 17 21:53 direxample
+-rwxr-xr-x 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-r--r-- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-r--r-- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-r--r-- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-r--r-- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-r--r-- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+[username@login02 OPENMP]$ chmod 660 *
+[username@login02 OPENMP]$ ls -l
+total 460
+drwxr-xr-x 2 username abc123      2 Jul 17 21:53 direxample
+-rw-rw-r-- 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-rw---- 1 username abc123    984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-rw---- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-rw---- 1 username abc123    656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-rw---- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-rw---- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+
+</code></pre>
+<p>In the example above, we use the star wildcard, \" * \" to represent all the files in the directory (See the section on wildcards below). We can use the wildcard to <strong>change the group</strong> of some of the files. For example, to change the 2023 of only the *.out files:</p>
+<pre><code>[username@login02 OPENMP]$ groups
+abc123 pet heart scicom-docs grdclus webwrt ...
+[username@login02 OPENMP]$ chgrp heart *.out
+[username@login02 OPENMP]$ ls -l
+total 460
+drwxr-xr-x 2 username abc123      2 Jul 17 21:53 direxample
+-rw-rw-r-- 1 username abc123 728112 Apr 15  2015 hello_openmp
+-rw-rw---- 1 username heart     984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-rw---- 1 username abc123    247 Apr 15  2015 hello_openmp.f90
+-rw-rw---- 1 username heart     656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+-rw-rw---- 1 username abc123    310 Apr 15  2015 openmp-slurm.sb
+-rw-rw---- 1 username abc123    347 Apr 22  2015 openmp-slurm-shared.sb
+</code></pre>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="wildcards"><a name="wildcards">Wildcards</a></h2>
+<p>\"A wildcard is a character that can be used as a substitute for any of a class of characters in a search, thereby greatly increasing the flexibility and efficiency of searches."  The wildcards are very powerful, and there is not room in this document for all of them, so we recommend that you check out this site:  http://www.linfo.org/wildcard.html for more information.</p>
+<p>In the example below, we use the star wildcard to list all files ending in <code>.out</code></p>
+<pre><code>[username@login02 OPENMP]$ ls -al *.out
+-rw-rw---- 1 username heart 984 Apr 15  2015 hello_openmp.500005.expanse-27-01.out
+-rw-rw---- 1 username heart 656 Apr 22  2015 hello_openmp_shared.508392.expanse-11-01.out
+</code></pre>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="other-utilities-to-learj"><a name="common-utilities">Other Utilities to Learj: </a></h2>
+<ul>
+<li>grep,  sort, tar, gzip ,and pigz</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="HPC Basic Skills"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../interactive_computing/" class="btn btn-neutral float-right" title="Interactive Computing on the Expanse Cluster">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../interactive_computing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/tooltips.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

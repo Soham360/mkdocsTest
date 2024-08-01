@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Interactive Computing on the Expanse Cluster - Mkdocs test website</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/cards.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Interactive Computing on the Expanse Cluster";
+        var mkdocs_page_input_path = "basic_skills/interactive_computing/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Mkdocs test website
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Documentation Dashboard</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CI Components Catalog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/">CI Components Catalog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/CHANGELOG/">Change Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CI-Components-Catalog/architecture/">ICICLE Architecture Conceptual Components</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PPODLinkML</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/">PPOD_FSL - A LinkML Schema for UC Davis Food Systems Lab Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/LICENSE/">LICENSE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Basic skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">HPC Basic Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Basic linux skills expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_linux_skills_expanse/">Using SDSC HPC Resources: Basic Linux Skills on Expanse</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Interactive computing</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Interactive Computing on the Expanse Cluster</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#obtaining-interactive-nodes">Obtaining Interactive Nodes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#log-onto-expansesdscedu">Log onto expanse.sdsc.edu</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#request-an-interactive-cpu-node-from-the-command-line">Request an interactive CPU node from the command line:</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Running notebooks on expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../running_notebooks_on_expanse/">Using Jupyter Notebooks on the SDSC Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Using github</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using_github/">Using GitHub at SDSC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Galyleo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../galyleo/">galyleo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hello icicle auth clients</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hello_icicle_auth_clients/">Hello ICICLE Authentication Clients</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Icicle rel 03 2023</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/">Hello ICICLE Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >CLI</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >ICICONSOLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/ICICONSOLE/">ICICONSOLE</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >TapisCL ICICLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/TapisCL-ICICLE/">TapisCLI</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Scripting Examples</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >TapisCLICICLE</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Tapis config files</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Notebooks</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/Notebooks/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/images/readme/">Readme</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Mkdocs test website</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Basic skills</li>
+          <li class="breadcrumb-item">Interactive computing</li>
+      <li class="breadcrumb-item active">Interactive Computing on the Expanse Cluster</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="interactive-computing-on-the-expanse-cluster">Interactive Computing on the Expanse Cluster</h1>
+<p>Interactive HPC systems allow real-time user inputs in order to facilitate code development, real-time data exploration, and visualizations. An interactive job (also referred as interactive session) will provide you with a shell on a compute node in which you can launch your jobs. In this tutorial we show you how to obtain interactive nodes on SDSC HPC systems</p>
+<p><strong>Note</strong> For more details on using Expanse, see the user guide: https://www.sdsc.edu/support/user_guides/expanse.html</p>
+<!-- TOC -->
+<p><a name="top">Contents
+* <a href="#interactive-nodes">Obtaining Interactive Nodes</a>
+* <a href="#interactive-node-command-line">Request an interactive CPU node from the command line:</a>
+* <a href="#interactive-gpu-command-line">Obtain interactive shared GPU node on Expanse</a></p>
+<!-- tocstop -->
+
+<h2 id="obtaining-interactive-nodes">Obtaining Interactive Nodes<a name="interactive-nodes"></a></h2>
+<p>There are two ways to obtain interactive nodes: 
+1. via the command line
+2. via a batch script</p>
+<h3 id="log-onto-expansesdscedu">Log onto expanse.sdsc.edu</h3>
+<pre><code>ssh -Y -l &lt;username&gt; expanse.sdsc.edu
+</code></pre>
+<ul>
+<li>To learn more about logging onto the Expase cluster, see these instructions: https://github.com/sdsc-hpc-training-org/hpc-security/blob/master/connecting-to-hpc-systems/connect-to-expanse.md</li>
+</ul>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+
+<h2 id="request-an-interactive-cpu-node-from-the-command-line">Request an interactive CPU node from the command line:  <a name="interactive-node-command-line"></a></h2>
+<ul>
+<li>You can request an interactive session using the The SLURM launch <code>srun</code> command.</li>
+<li>The following example will request one regular compute node, 4 cores,  in the debug partition for 30 minutes.</li>
+</ul>
+<pre><code>srun --partition=debug  --pty --account=&lt;&lt;project&gt;&gt; --nodes=1 --ntasks-per-node=4 --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
+</code></pre>
+<ul>
+<li>Wait for your node to be allocated.</li>
+<li>This may take a while, depending on how busy the system is.</li>
+<li>When you have your node, you will get a message like this:</li>
+</ul>
+<p><code>srun: job 13469789 queued and waiting for resources
+srun: job 13469789 has been allocated resources
+[user@exp-9-55 ~]$</code></p>
+<ul>
+<li>Notice that you are logged onto a different node than the login node.</li>
+<li>Run some commands to learn about the node:</li>
+</ul>
+<p>```
+[user@exp-9-55 ~]$   hostname
+exp-9-55.sdsc.edu
+[user@exp-9-55 ~]$  who
+[user@exp-9-55 ~]$  whoami
+user
+[user@exp-9-55 ~]$ 
+[user@exp-9-55 ~]$<br />
+top - 21:37:07 up 15 days, 15:58,  0 users,  load average: 0.03, 0.06, 0.05
+Tasks: 620 total,   1 running, 619 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 13165400+total, 12897894+free,  1933784 used,   741272 buff/cache
+KiB Swap:        0 total,        0 free,        0 used. 12866142+avail Mem </p>
+<p>PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                            <br />
+17259 root      20   0   22408  15684   2476 S   0.7  0.0  30:25.44 serf                               <br />
+ 6380 root      20   0       0      0      0 S   0.3  0.0   0:13.09 jbd2/md1-8                         <br />
+    1 root      20   0  192860   4816   1604 S   0.0  0.0   2:30.00 systemd                            <br />
+    2 root      20   0       0      0      0 S   0.0  0.0   0:02.72 kthreadd                           <br />
+    3 root      20   0       0      0      0 S   0.0  0.0   0:07.61 ksoftirqd/0                        <br />
+    8 root      rt   0       0      0      0 S   0.0  0.0   0:01.05 migration/0                        <br />
+    9 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh                             <br />
+   10 root      20   0       0      0      0 S   0.0  0.0   4:00.35 rcu_sched       </p>
+<pre><code>
+* At this point, you can edit, compile, run code, including MPI, OpenMP, or jupyter notebooks.
+* For an example of running a notebook, see the the following tutorial:
+  * https://github.com/sdsc-hpc-training/basic_skills/tree/master/how_to_run_notebooks_on_expanse
+* For a collection of test notebooks, see: https://github.com/sdsc-hpc-training-org/notebook-examples-expanse
+
+[Back to Top](#top)
+&lt;hr&gt;
+
+## Obtain interactive shared GPU node on SDSC Expanse &lt;a name=&quot;interactive-gpu-command-line&quot;&gt;&lt;/a&gt;
+* This works the same way, but you need to access the GPU nodes
+* The SLURM launch command below will obtain an interactive node with access to 1 K80 GPU on the shared GPU nodes for 3h. You can also execute this command directly on the command line:
+</code></pre>
+<p>srun --partition=gpu-shared --reservation=gputraining --nodes=1 --ntasks-per-node=6 --gres=gpu:k80:1  -t 03:00:00 --pty --wait=0 /bin/bash</p>
+<pre><code>
+* It may take some time to get the interactive node.
+* Load the CUDA and PGI compiler modules
+
+</code></pre>
+<p>module purge
+module load gnutools
+module load cuda
+module load pgi</p>
+<pre><code>* If you get a license error when executing the PGI compilers, execute the following:
+
+</code></pre>
+<p>export LM_LICENSE_FILE=40200@elprado.sdsc.edu:$LM_LICENSE_FILE
+```</p>
+<p><a href="#top">Back to Top</a></p>
+<hr>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic_linux_skills_expanse/" class="btn btn-neutral float-left" title="Using SDSC HPC Resources: Basic Linux Skills on Expanse"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../running_notebooks_on_expanse/" class="btn btn-neutral float-right" title="Using Jupyter Notebooks on the SDSC Expanse Cluster">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../basic_linux_skills_expanse/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../running_notebooks_on_expanse/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/tooltips.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

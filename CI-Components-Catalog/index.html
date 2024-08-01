@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>CI Components Catalog - Mkdocs test website</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/cards.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CI Components Catalog";
+        var mkdocs_page_input_path = "CI-Components-Catalog/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mkdocs test website
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Documentation Dashboard</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CI Components Catalog</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">CI Components Catalog</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#catalog-schema">Catalog Schema</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploying-the-catalog-locally">Deploying the Catalog Locally</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-make">Using Make</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#building-with-docker">Building with Docker</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#application-urls">Application URLs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#authentication-with-tapis">Authentication with Tapis</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#create-an-oauth-client-one-time-setup">Create an OAuth Client (One Time Setup)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#configure-the-catalog-to-use-the-client">Configure the Catalog to Use the Client</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deployment-to-pods">Deployment to Pods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#update-the-deployment">Update the Deployment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-the-initial-deployment">Creating the Initial Deployment</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="CHANGELOG/">Change Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="architecture/">ICICLE Architecture Conceptual Components</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PPODLinkML</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../PPODLinkML/">PPOD_FSL - A LinkML Schema for UC Davis Food Systems Lab Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PPODLinkML/LICENSE/">LICENSE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Basic skills</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_skills/">HPC Basic Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Basic linux skills expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_skills/basic_linux_skills_expanse/">Using SDSC HPC Resources: Basic Linux Skills on Expanse</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Interactive computing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_skills/interactive_computing/">Interactive Computing on the Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Running notebooks on expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_skills/running_notebooks_on_expanse/">Using Jupyter Notebooks on the SDSC Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Using github</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_skills/using_github/">Using GitHub at SDSC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Galyleo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../galyleo/">galyleo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hello icicle auth clients</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../hello_icicle_auth_clients/">Hello ICICLE Authentication Clients</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Icicle rel 03 2023</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../hello_icicle_auth_clients/icicle_rel_03_2023/">Hello ICICLE Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >CLI</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >ICICONSOLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/ICICONSOLE/">ICICONSOLE</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >TapisCL ICICLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/TapisCL-ICICLE/">TapisCLI</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Scripting Examples</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >TapisCLICICLE</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Tapis config files</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Notebooks</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../hello_icicle_auth_clients/icicle_rel_03_2023/Notebooks/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../hello_icicle_auth_clients/images/readme/">Readme</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mkdocs test website</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CI Components Catalog</li>
+      <li class="breadcrumb-item active">CI Components Catalog</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ci-components-catalog">CI Components Catalog</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This repository contains metadata and code for the ICICLE CI Components Catalog. The CI Components Catalog tracks all major
+products developed by the ICICLE AI Institute. Using the Catalog, members within ICICLE as well as their collaborators and
+the general public can learn about the products being produced. </p>
+<h2 id="catalog-schema">Catalog Schema</h2>
+<p>We are using LinkML and JSONSchema to describe the data model associated with components in the catalog. 
+The JSONSchema document can be generated from the LinkML yaml document by doing the following:</p>
+<pre><code>$ docker run -v $(pwd):/work  -w /work/ --rm -it jstubbs/linkml gen-json-schema ci-component.yaml
+
+</code></pre>
+<p>You can test the schema by validating the local example dataset <code>components-data.yaml</code>, 
+included in the repository, by doing the following:</p>
+<pre><code>docker run -v $(pwd):/work  -w /work/ --rm -it jstubbs/linkml linkml-validate -s ci-component.yaml components-data.yaml
+</code></pre>
+<p>If no errors are returned, the message <code>None</code> will be output. </p>
+<h2 id="deploying-the-catalog-locally">Deploying the Catalog Locally</h2>
+<p>A simple prototype application is being developed with Flask and Docker. You need to install
+Docker on your computer before trying to run the application locally. See the <a href="https://docs.docker.com/get-docker/">Docker 
+documentation</a> for information about how to get Docker on your platform.</p>
+<p>You can deploy the prototype locally using one of the following methods:</p>
+<h3 id="using-make">Using Make</h3>
+<p>If you have GNU make on your computer, issuing the following command should build the
+application image and start the container in one go:</p>
+<pre><code>make run
+</code></pre>
+<h3 id="building-with-docker">Building with Docker</h3>
+<p>One can build the container image using a command such as:</p>
+<pre><code>docker build -t tapis/ci-catalog .
+</code></pre>
+<p>With the image build, start the application using:</p>
+<pre><code>docker run --name catalog --rm -p 5000:5000 tapis/ci-catalog
+</code></pre>
+<h2 id="application-urls">Application URLs</h2>
+<p>With the application deployed locally, navigate to <code>localhost:5000/data</code> to see the 
+catalog overview. Note that the root URL, <code>localhost:5000</code>, redirects to the catalog overview.</p>
+<p><img alt="Catalog" src="catalog.png" /></p>
+<p>The catalog also provides a "details" screen for each component. Navigate to 
+<code>localhost:5000/data/&lt;component_id&gt;</code> to see the details of a component. For example, by 
+navigating to <code>http://localhost:5000/data/CameraTrapsEdgeSim</code>, we see details about the Camera Traps
+project:</p>
+<p><img alt="Details" src="catalog-component-details.png" /></p>
+<h3 id="authentication-with-tapis">Authentication with Tapis</h3>
+<p>The CI Components Catalog is designed to use Tapis authentication and authorization. Components in the catalog 
+can be restricted to members of ICICLE by setting <code>publicAccess</code> to <code>false</code>. Access can be further
+restricted by setting the <code>restrictedToRole</code> attribute on a component -- in this case, a person must be a
+member of the corresponding Tapis role to view the component. </p>
+<p>In order to leverage Tapis authn/z in the catalog running locally, you need to configure it
+with a Tapis OAuth client. Generating an OAuth client can be done following the steps 
+below; see the <a href="https://tapis.readthedocs.io/en/latest/technical/authentication.html#oauth-clients">docs</a> for more details.</p>
+<h4 id="create-an-oauth-client-one-time-setup">Create an OAuth Client (One Time Setup)</h4>
+<p>First, generate a JWT and export it to the environment:</p>
+<pre><code>curl -H &quot;Content-type: application/json&quot; -d '{&quot;username&quot;: &quot;your_username&quot;, &quot;password&quot;: &quot;your_password&quot;, &quot;grant_type&quot;: &quot;password&quot; }' https://icicle.tapis.io/v3/oauth2/tokens
+
+export JWT=eyJ0eXAiOiJK....
+</code></pre>
+<p>Use the token to register an OAuth client:</p>
+<pre><code>curl -H &quot;X-Tapis-Token: $JWT&quot; -H &quot;Content-type: application/json&quot; -d '{&quot;client_id&quot;: &quot;ci-comps-test&quot;, &quot;callback_url&quot;: &quot;http://localhost:5000/oauth2/callback&quot;, &quot;client_key&quot;: &quot;icicle4ever&quot;}' https://icicle.tapis.io/v3/oauth2/clients
+</code></pre>
+<h4 id="configure-the-catalog-to-use-the-client">Configure the Catalog to Use the Client</h4>
+<p>The catalog needs to be configured with the client id and key to work with Tapis OAuth.
+Simply add the id and key to the <code>config.yaml</code> file.</p>
+<h2 id="deployment-to-pods">Deployment to Pods</h2>
+<p>A hosted version of the Catalog is now running on the Tapis Pods API. Navigate to the 
+<a href="https://components.pods.icicle.tapis.io">Production URL</a> to interact with the most recently
+deployed version.</p>
+<h3 id="update-the-deployment">Update the Deployment</h3>
+<p><strong>NOTE:</strong> Updating the deployment requires access to the <code>tapis</code> organization on Docker Hub to 
+be able to push a new version of the image as well as access to the <code>components</code> pod in the
+ICICLE tenant. Reach out on the #icicle_ci_component_catalog channel of tacc-cloud.slack.com if 
+you need help getting access. </p>
+<p>Updating the deployment on Tapis Pods is incredibly easy -- just do the following:</p>
+<p>1) Push a new version of the image to docker hub: <code>tapis/ci-catalog:latest</code>
+2) Use the restart operation to restart the pod; this will pull the new image:</p>
+<pre><code>curl -H &quot;x-tapis-token: $token&quot; https://icicle.tapis.io/v3/pods/components/restart
+
+</code></pre>
+<p>You can check on the deployment by doing:</p>
+<pre><code>curl -H &quot;x-tapis-token: $token&quot; https://icicle.tapis.io/v3/pods/components/catalog
+</code></pre>
+<p>And you can see recent logs of the deployed version with:</p>
+<pre><code>curl -H &quot;x-tapis-token: $token&quot; https://icicle.tapis.io/v3/pods/components/logs
+</code></pre>
+<h3 id="creating-the-initial-deployment">Creating the Initial Deployment</h3>
+<p><strong>NOTE:</strong> Registering the same pod again is not only unnecessary but it will not work, because the <code>id</code> is already taken. We leave this here only to document what was done, for posterity. </p>
+<p>The initial deployment to the pods service involved creating a new pod with the "components" ID. </p>
+<p>We used the following <code>curl</code> command to register the pod.</p>
+<pre><code>curl -H &quot;x-tapis-token: $token&quot; https://icicle.tapis.io/v3/pods -H &quot;content-type: application/json&quot; -d '{&quot;pod_id&quot;: &quot;components&quot;, &quot;pod_template&quot;: &quot;tapis/ci-catalog&quot;, &quot;description&quot;: &quot;Pod for hosted version of the ICICLE CI Component Catalog&quot;, &quot;environment_variables&quot;: {&quot;client_id&quot;: &quot;&lt;the prod client id&gt;&quot;, &quot;client_key&quot;: &quot;&lt;the prod client key&gt;&quot;,&quot;app_base_url&quot;: &quot;https://components.pods.icicle.tapis.io&quot;}, &quot;time_to_stop_instance&quot;:  -1}'
+</code></pre>
+<p>Here, <code>$token</code> must be a valid Tapis JWT in the icicle tenant for a user authorized for the <code>components</code>
+pod.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p><em>This work has been funded by grants from the National Science Foundation, including the ICICLE AI Institute (OAC 2112606)</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Documentation Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="CHANGELOG/" class="btn btn-neutral float-right" title="Change Log">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="CHANGELOG/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../js/tooltips.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

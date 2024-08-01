@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Using GitHub at SDSC - Mkdocs test website</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/cards.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Using GitHub at SDSC";
+        var mkdocs_page_input_path = "basic_skills/using_github/README.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Mkdocs test website
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Documentation Dashboard</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CI Components Catalog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/">CI Components Catalog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../CI-Components-Catalog/CHANGELOG/">Change Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Architecture</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CI-Components-Catalog/architecture/">ICICLE Architecture Conceptual Components</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PPODLinkML</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/">PPOD_FSL - A LinkML Schema for UC Davis Food Systems Lab Applications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../PPODLinkML/LICENSE/">LICENSE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Basic skills</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">HPC Basic Skills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Basic linux skills expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../basic_linux_skills_expanse/">Using SDSC HPC Resources: Basic Linux Skills on Expanse</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Interactive computing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../interactive_computing/">Interactive Computing on the Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Running notebooks on expanse</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../running_notebooks_on_expanse/">Using Jupyter Notebooks on the SDSC Expanse Cluster</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Using github</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Using GitHub at SDSC</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#suggested-on-line-tutorials">Suggested On-line Tutorials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-github-account">Create a GitHub Account:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-git-on-local-system">Install Git on Local System</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#install-git-on-linux">Install git on Linux:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installing-git-on-mac-os-x">Installing git on Mac OS X:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installing-git-on-windows">Installing git on Windows:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cloning-a-repository">Cloning a Repository:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#checkout-a-branch">Checkout a Branch:</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Galyleo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../galyleo/">galyleo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hello icicle auth clients</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hello_icicle_auth_clients/">Hello ICICLE Authentication Clients</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Icicle rel 03 2023</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/">Hello ICICLE Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >CLI</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >ICICONSOLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/ICICONSOLE/">ICICONSOLE</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" >TapisCL ICICLE</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/CLI/TapisCL-ICICLE/">TapisCLI</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Scripting Examples</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >TapisCLICICLE</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" >Tapis config files</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Notebooks</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../hello_icicle_auth_clients/icicle_rel_03_2023/Notebooks/">Hello Icicle Authentication Clients Software Release Notes:</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hello_icicle_auth_clients/images/readme/">Readme</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Mkdocs test website</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Basic skills</li>
+          <li class="breadcrumb-item">Using github</li>
+      <li class="breadcrumb-item active">Using GitHub at SDSC</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-github-at-sdsc">Using GitHub at SDSC</h1>
+<p>Github repositories can be accessed and updated on all SDSC HPC systems. 
+Make sure your local system or laptop can run git. </p>
+<h2 id="suggested-on-line-tutorials">Suggested On-line Tutorials</h2>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/">https://swcarpentry.github.io/git-novice/</a></li>
+</ul>
+<p><a name="top"><strong>Contents::</strong>
+* <a href="#git-acct">Create Git Account</a>
+* <a href="#git-install">Install Git on Local System</a>
+* <a href="#git-install-linux">Install Git on Linux</a>
+* <a href="#git-install-mac">Install Git on Mac</a>
+* <a href="#git-install-windows">Install Git on Windows</a>
+* <a href="#git-clone">Clone the Git repository</a>
+* <a href="#git-branch">Checkout a branch</a></p>
+<h2 id="create-a-github-account">Create a GitHub Account: <a name="git-acct"></a></h2>
+<ul>
+<li>See:  see https://github.com/join </li>
+<li>If you do not currently have a <a href="https://github.com/">GitHub</a> account, you must obtain one prior to attending the SDSC training activities.</li>
+<li>Working with  <code>git</code> and GitHub will be covered in both introductory and advanced training sessions on these tools.</li>
+</ul>
+<h2 id="install-git-on-local-system">Install Git on Local System <a name="git-install"></a></h2>
+<ul>
+<li>To learn the basics of setting up GitHub, see this guide:  <a href="https://help.github.com/en/articles/set-up-git">https://help.github.com/en/articles/set-up-git</a>. </li>
+</ul>
+<h3 id="install-git-on-linux">Install <code>git</code> on Linux:<a name="git-install-linux"></a></h3>
+<p>If you want to install <code>git</code> on a Linux-based operating system, you should be
+able to do so via your operating system's standard package management tool. For
+example, on any RPM-based Linux distribution, such as Fedora, RHEL, or CentOS, 
+you can use <code>dnf</code>:</p>
+<pre><code>$ sudo dnf install git-all
+</code></pre>
+<p>Or on any Debian-based distribution, such as Ubuntu, try <code>apt</code>:</p>
+<pre><code>$ sudo apt install git-all
+</code></pre>
+<h3 id="installing-git-on-mac-os-x">Installing <code>git</code> on Mac OS X:</h3>
+<p>There are several ways to install <code>git</code> on your Mac. However, probably the 
+easiest way is to install the <a href="https://developer.apple.com/xcode/">Xcode</a> 
+Command Line Tools, which you should be able to do by simply tying to run git 
+from your <a href="https://support.apple.com/guide/terminal/welcome/mac">Terminal</a>:</p>
+<pre><code>$ git --version
+</code></pre>
+<p>If it's not already installed, you should be prompted to install it.</p>
+<p>If the above option does not work or you need a more up-to-date version of 
+<code>git</code>, you can always install it via a binary installer maintained by the <code>git</code>
+team, which is available for download at: </p>
+<p><a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a>. </p>
+<p>The download should start immediately.</p>
+<h3 id="installing-git-on-windows">Installing <code>git</code> on Windows:</h3>
+<ul>
+<li>There are also several ways to install <code>git</code> under Windows. The official binary executable is available for download on the <code>git</code> website is here:</li>
+</ul>
+<p><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<ul>
+<li>If you've chosen to work on the <a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows Subsystem for Linux</a>
+ follow the installation directions for Linux given above.</li>
+</ul>
+<h2 id="cloning-a-repository">Cloning a Repository:<a name="git-clone"></a></h2>
+<ul>
+<li>GitHub supports two ways to clone a repository: (1) Anonymous HTTPS cloning (no account required);  (2) Authenticated method using a SSH, which requires authentication to a GitHub account associated with the repository.</li>
+<li>As an example, we will download the SDSC Jupyter "Notebook Examples" Repository:</li>
+<li>
+<p><a href="https://github.com/sdsc-hpc-training-org/notebook-examples">https://github.com/sdsc-hpc-training-org/notebook-examples</a></p>
+</li>
+<li>
+<p>Anonymous HTTPS Method: click on the option on the GitHub repo</p>
+</li>
+<li>
+<p>To clone the Notebook repository:</p>
+</li>
+<li>Open a terminal window on your laptop. Optionally, create a directory to save the repo; cd into that directory</li>
+<li>In your browser, open the link to the repository web page: <a href="https://github.com/sdsc-hpc-training-org/notebook-examples">https://github.com/sdsc-hpc-training-org/notebook-examples</a></li>
+<li>Click on the green "Clone or Download" and select the "Clone with HTTPS" option</li>
+<li>copy the  repository link in the box</li>
+<li>In your terminal window, type the following command</li>
+</ul>
+<pre><code>$ git clone https://github.com/sdsc-hpc-training-org/notebook-examples.git
+</code></pre>
+<ul>
+<li>
+<p>The repository should start downloading in the directory from which you ran the <code>clone</code> command.</p>
+</li>
+<li>
+<p>Authenticated cloning:  This method requires that you create a <a href="https://github.com/">GitHub</a> account and then you must be added to the repository project team. </p>
+</li>
+</ul>
+<h2 id="checkout-a-branch">Checkout a Branch:<a name="git-branch"></a></h2>
+<ul>
+<li>Make sure you have the main repository cloned locally. Then change to the root of the local repository.</li>
+</ul>
+<pre><code>(base) [username@login01 ~]$ git clone https://github.com/sdsc-hpc-training-org/basic_skills.git
+Cloning into 'basic_skills'...
+remote: Enumerating objects: 330, done.
+remote: Counting objects: 100% (330/330), done.
+remote: Compressing objects: 100% (240/240), done.
+remote: Total 330 (delta 152), reused 160 (delta 58), pack-reused 0
+Receiving objects: 100% (330/330), 4.10 MiB | 12.21 MiB/s, done.
+Resolving deltas: 100% (152/152), done.
+(base) [username@login01 ~]$ cd basic_skills/
+</code></pre>
+<ul>
+<li>List all available branches:</li>
+</ul>
+<pre><code>(base) [username@login01 basic_skills]$ git branch -a
+* master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/basic_skills_branch
+  remotes/origin/master   
+</code></pre>
+<ul>
+<li>Notice that it lists both the branches that are local and the remote branches on Bitbucket. Using the list as reference, choose the branch you want to checkout.  In this example, we want <code>basic_skills_branch.</code></li>
+</ul>
+<pre><code>(base) [username@login01 basic_skills]$ git checkout basic_skills_branch
+Branch 'basic_skills_branch' set up to track remote branch 'basic_skills_branch' from 'origin'.
+Switched to a new branch 'basic_skills_branch'
+(base) [username@login01 basic_skills]$ 
+(base) [username@login01 basic_skills]$ 
+</code></pre>
+<ul>
+<li>Verify that you have checkout the right branch:</li>
+</ul>
+<pre><code>(base) [username@login01 basic_skills]$ 
+(base) [username@login01 basic_skills]$ git branch
+
+* basic_skills_branch
+  master
+(base) [username@login01 basic_skills]$ 
+</code></pre>
+<ul>
+<li>At this point, all changes made will affect the branch, not the master</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../running_notebooks_on_expanse/" class="btn btn-neutral float-left" title="Using Jupyter Notebooks on the SDSC Expanse Cluster"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../galyleo/" class="btn btn-neutral float-right" title="galyleo">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../running_notebooks_on_expanse/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../galyleo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/tooltips.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
