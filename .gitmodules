@@ -1,0 +1,6 @@
+[submodule "galyleo"]
+	path = galyleo
+	url = https://github.com/Soham360/galyleo
+[submodule "basic_skills"]
+	path = basic_skills
+	url = https://github.com/Soham360/basic_skills
