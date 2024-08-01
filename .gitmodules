@@ -4,3 +4,9 @@
 [submodule "basic_skills"]
 	path = basic_skills
 	url = https://github.com/Soham360/basic_skills
+[submodule "PPODLinkML"]
+	path = PPODLinkML
+	url = https://github.com/ICICLE-ai/PPODLinkML
+[submodule "hello_icicle_auth_clients"]
+	path = hello_icicle_auth_clients
+	url = https://github.com/ICICLE-ai/hello_icicle_auth_clients
